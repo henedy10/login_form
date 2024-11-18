@@ -1,0 +1,101 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: url("../img/free-website-background-02.jpg") ;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-weight: bold;
+}
+h1{
+    text-align: center;
+    padding: 10px;
+}
+img{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin: auto;
+    display: block;
+}
+.login{
+    padding-top: 9px;
+    width: 430px;
+    height: 510px;
+    border: 3px solid #033688;
+    box-shadow: 6px 6px 7px 0px #0a6edc;
+    border-radius: 15px;
+}
+.input-box{
+    position: relative;
+}
+.input-box input{
+    width: 82%;
+    margin: 10px calc((18%) / 2);
+    border-radius: 8px;
+    padding: 11px;
+    border: none;
+    outline: none;
+}
+.input-box i{
+    position: absolute;
+    right: 15px;
+    top: 20px;
+    color: white;
+}
+.remember-forget p {
+    margin-left: 26px;
+    padding-top: 9px;
+
+}
+.remember-forget p a{
+    margin-left: 100px;
+}
+.register{
+    margin-top: 15px;
+}
+.register input {
+    width: 82%;
+    margin: 15px calc((18%) / 2);
+    border: none;
+    border-radius: 18px;
+    padding: 11px;
+    font-weight: bold;
+    font-size: 16px;
+    background-color: white;
+}
+.register p{
+    text-align: center;
+    margin-top: 8px;
+
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+.register input:hover{
+    background-color: #172d41;
+    color: white;
+}
+a:hover{
+    color: black;
+    text-decoration: underline;
+}
+.error{
+    color: red;
+    background-color: orange;
+    width: 80%;
+    text-align: center;
+    margin: auto;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+
+
+

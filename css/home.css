@@ -1,0 +1,27 @@
+body{
+background-color: antiquewhite;
+}
+.hello{
+    font-size: 30px;
+    font-weight: bold;
+    font-family: system-ui;
+    color: red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+}
+.logout input{
+    background-color: black;
+    color: green;
+    padding: 10px;
+    margin-top: 10px;
+    font-size: 20px;
+    border-radius: 5px;
+    border: none;
+}
+.logout input:hover{
+    background-color: green;
+    color: white;
+}
