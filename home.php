@@ -24,7 +24,7 @@ if(isset($_POST['logout'])){
     <div class="hello">
         <?php 
             
-            echo "HELLOooo ".$name; 
+            echo "HELLO".$name; 
         ?>
         <form action="home.php" method="POST">
             <div class="logout">
