@@ -96,3 +96,15 @@ button{
 .footer p{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
+@media only screen and (max-width: 500px){
+    .content{
+        width:95%;
+    }
+}
+
+@media only screen and (max-width: 350px){
+    input,button{
+        width: 265px;
+    }
+}

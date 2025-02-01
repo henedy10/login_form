@@ -78,3 +78,14 @@ button{
    background-color: black;
 }
 
+@media only screen and (max-width: 500px){
+    .content{
+        width:95%;
+    }
+}
+
+@media only screen and (max-width: 350px){
+    input,button{
+        width: 265px;
+    }
+}
