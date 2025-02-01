@@ -1,0 +1,98 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.container{
+    background-color: rgb(240, 233, 232);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+.content{
+    background-color: rgb(212, 225, 212);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+    width: 450px;
+    height: 500px;
+    box-shadow: 5px 5px 10px -2px rgb(146, 142, 142) ;
+    position: relative;
+    border-radius: 5px;
+}
+.content-heading{
+    background-color: rgb(47, 172, 55);
+    height: 25%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 5px 5px 0 0;
+}
+h1{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+}
+input{
+    width: 300px;
+    border-radius: 5px;
+    border: none;
+    padding: 10px;
+    outline: none;
+}
+input::placeholder{
+    font-weight: bolder;
+}
+.forget{
+    width: 60%;
+    display: flex;
+    justify-content: flex-end;
+}
+.forget a span{
+    color: rgb(54, 161, 76);
+}
+a{
+    text-decoration: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+button{
+    width: 300px;
+    border-radius: 5px;
+    padding: 10px;
+    font-weight: bolder;
+    border: none;
+    background-color: rgb(22, 150, 22);
+    cursor: pointer;
+}
+.sign-in button{
+    color: white;
+}
+.sign-in button:hover{
+   color: green;
+   background-color: black;
+}
+.footer{
+    height: 25%;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 5px;
+}
+.footer a{
+    color: green;
+}
+.footer p{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
