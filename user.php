@@ -5,23 +5,27 @@ class User {
  public $special;
  public function __construct()
  {
-    $this->db=new database();
- }
-
- public function login($username,$password){
-    $sql ="SELECT *FROM account WHERE username ='$username'";
-    $result=mysqli_query($this->db->connect,$sql);
-    $row=mysqli_fetch_assoc($result);
-    if(mysqli_num_rows($result)<=0){
-        return "This account is not exist !";
+     $this->db=new database();
     }
+    
+    public function login($username,$password){
+     if(empty($username)||empty($password))
+     return "Check, All inputs must have a value";
     else{
-        if(password_verify($password,$row['password'])){
-            header("location : home.php");
-            exit();
+        $sql ="SELECT *FROM account WHERE username ='$username'";
+        $result=mysqli_query($this->db->connect,$sql);
+        $row=mysqli_fetch_assoc($result);
+        if(mysqli_num_rows($result)<=0){
+            return "This account is not exist !";
         }
         else{
-            return "Password is not correct !";
+            if(password_verify($password,$row['password'])){
+                header("location : home.php");
+                exit();
+            }
+            else{
+                return "Password is not correct !";
+            }
         }
     }
 }
@@ -50,25 +54,30 @@ else{
         
     }
     
- }
+}
 }
 
 public function update($username,$password,$confirmpass){
     $sql="SELECT *FROM account WHERE username='$username'";
     $result=mysqli_query($this->db->connect,$sql);
-    if(mysqli_num_rows($result)<=0)
+    if(empty($username)||empty($password)||empty($confirmpass))
+    return "Check, All inputs must have a value";
+else{
+        if(mysqli_num_rows($result)<=0)
         return "This account is not exist";
     else{
         if(password_verify($password,$confirmpass)){
-            $sql="UPDATE account SET password='$password'";
+            $hashpassword=password_hash($password,PASSWORD_DEFAULT);
+            $sql="UPDATE account SET password='$hashpassword'";
             $result=mysqli_query($this->db->connect,$sql);
             if($result)
             return "Your update process is done successfully";
-        }
-        else{
-            return 'check your info again';
-        }
     }
+    else{
+        return 'check your info again';
+            }
+        }
+}
 }
 }
 
